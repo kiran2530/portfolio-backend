@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const User = require("../models/User");
 const nodemailer = require("nodemailer");
@@ -10,7 +11,7 @@ const transporter = nodemailer.createTransport({
   service: "gmail", // Use your email service
   auth: {
     user: "kiran30.portfolio@gmail.com",
-    pass: "rxvk fohq fbvp syph",
+    pass: process.env.PASS,
   },
 });
 
